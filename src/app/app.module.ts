@@ -10,7 +10,8 @@ import {DataTableModule} from "angular2-datatable";
 import { HttpserviceService} from './httpservice.service';
 import { HttpModule } from '@angular/http';
 import { BookcontentComponent } from './home/bookcontent/bookcontent.component';
-
+import { FormsModule } from '@angular/forms';
+import {DatafilterPipe} from './datafilter.pipe';
 
 const appRoutes: Routes = [
 
@@ -23,7 +24,8 @@ const appRoutes: Routes = [
     AppComponent,
     HomeComponent,
     BooklistComponent,
-    BookcontentComponent
+    BookcontentComponent,
+    DatafilterPipe
   ],
   imports: [
     BrowserModule,
@@ -32,6 +34,7 @@ const appRoutes: Routes = [
     RouterModule.forRoot(
       appRoutes // <-- debugging purposes only
     ),
+    FormsModule
   ],
   providers: [ HttpserviceService],
   bootstrap: [AppComponent]

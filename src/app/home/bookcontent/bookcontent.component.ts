@@ -18,7 +18,7 @@ arr3=[];
 arr4=[];
 data;
  public filterQuery = "";
-    public rowsOnPage = 10;
+    public rowsOnPage = 1;
     public sortBy = "email";
     public sortOrder = "asc";
 
@@ -60,7 +60,7 @@ for (var key in this.arr2) {
 }
 this.data=this.arr3;
 console.log("AAAASFASAF");
-this.arr4=this.splitNChars(this.arr3[0].text,3);
+this.arr4=this.splitNChars(this.arr3[0].text,1000);
 console.log(this.arr3);
  });
    // this.bookname=this.routes.snapshot.params['name'];

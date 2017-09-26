@@ -1,54 +1,70 @@
-<p>
-  booklist works!
-</p>
-{{genrename}}
+
 
 <div class="container-fluid">
     <div class="col-xs-12 col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2">
 
 
+
+
+        <div class="row">
+          
+            <div class="col-xs-2">
+              
+               
+            </div>
+            <div class="col-xs-4">
+                <div class="row">
+                    <label class="col-xs-12 label-control">Sort by</label>
+                </div>
+                <div class="col-xs-6">
+                    <div class="row">
+                        <select class="form-control input-sm" [(ngModel)]="sortBy">
+                            <option ngValue="name">Name</option>
+                            <option ngValue="email">Author</option>
+                          
+                        </select>
+                    </div>
+                </div>
+                <div class="col-xs-6">
+                    <div class="row">
+                      
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading">User information</div>
       
         <div class="panel panel-default">
           
 
             <table class="table table-striped" [mfData]="data" #mf="mfDataTable"
-                   [mfRowsOnPage]="rowsOnPage" [(mfSortBy)]="sortBy" [(mfSortOrder)]="sortOrder">
+                   [mfRowsOnPage]="1" [(mfSortBy)]="sortBy" [(mfSortOrder)]="sortOrder">
                 <thead>
                 <tr>
-                    <th style="width: 10%"></th>
-                    <th style="width: 20%">
+                
+                    <th style="width: 50%">
                         <mfDefaultSorter by="name">Name</mfDefaultSorter>
                     </th>
-                    <th style="width: 40%">
-                        <mfDefaultSorter by="email">Email</mfDefaultSorter>
+                    <th style="width: 50%">
+                        <mfDefaultSorter by="email">Author</mfDefaultSorter>
                     </th>
-                    <th style="width: 10%">
-                        <mfDefaultSorter by="age">Age</mfDefaultSorter>
-                    </th>
-                    <th style="width: 20%">
-                        <mfDefaultSorter [by]="sortByWordLength">City</mfDefaultSorter>
-                    </th>
+               
                 </tr>
-                <tr>
-                    <th colspan="5">
-                        Filter by name:
-                        <input class="form-control"/>
-                    </th>
-                </tr>
+               
                 </thead>
                 <tbody>
                 <tr *ngFor="let item of mf.data">
-                    <td>
-                        <button (click)="remove(item)" class="btn btn-danger">x</button>
-                    </td>
+                  
                     <td (click)="clickbook($event.srcElement.firstChild.data)">{{item.name}}</td>
                        <td>{{item.author}}</td>
+                       <img src={{item.image}} alt="" border="3" height="100" width="100" />
                     <!--<td>{{item.email}}</td>
                     <td class="text-right">{{item.age}}</td>
                     <td>{{item.city | uppercase}}</td>-->
                 </tr>
                 </tbody>
-                <tfoot>
+               <tfoot>
                 <tr>
                     <td colspan="5">
                         <mfBootstrapPaginator [rowsOnPageSet]="[5,10,15]"></mfBootstrapPaginator>
