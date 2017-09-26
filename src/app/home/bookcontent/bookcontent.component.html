@@ -1,7 +1,7 @@
 <p>
-  booklist works!
+  bookcontent works!
 </p>
-{{genrename}}
+{{bookname}}
 
 <div class="container-fluid">
     <div class="col-xs-12 col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2">
@@ -37,12 +37,12 @@
                 </tr>
                 </thead>
                 <tbody>
-                <tr *ngFor="let item of mf.data">
+                <tr *ngFor="let item of arr4">
                     <td>
                         <button (click)="remove(item)" class="btn btn-danger">x</button>
                     </td>
-                    <td (click)="clickbook($event.srcElement.firstChild.data)">{{item.name}}</td>
-                       <td>{{item.author}}</td>
+                    <td >{{item}}</td>
+                    
                     <!--<td>{{item.email}}</td>
                     <td class="text-right">{{item.age}}</td>
                     <td>{{item.city | uppercase}}</td>-->

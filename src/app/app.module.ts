@@ -9,16 +9,29 @@ import {DataTableModule} from "angular2-datatable";
 
 import { HttpserviceService} from './httpservice.service';
 import { HttpModule } from '@angular/http';
+import { BookcontentComponent } from './home/bookcontent/bookcontent.component';
+
+
+const appRoutes: Routes = [
+
+ 
+ { path: '',      component: HomeComponent },
+ 
+];
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    BooklistComponent
+    BooklistComponent,
+    BookcontentComponent
   ],
   imports: [
     BrowserModule,
     DataTableModule,
-    HttpModule 
+    HttpModule ,
+    RouterModule.forRoot(
+      appRoutes // <-- debugging purposes only
+    ),
   ],
   providers: [ HttpserviceService],
   bootstrap: [AppComponent]

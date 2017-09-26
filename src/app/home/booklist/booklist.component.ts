@@ -1,7 +1,10 @@
-import { Component, OnInit ,Input} from '@angular/core';
+import { Component, OnInit ,Input,Output} from '@angular/core';
 import {Http} from "@angular/http";
 import { HttpserviceService} from '../../httpservice.service';
 import {Response } from '@angular/http';
+import { RouterModule, Router } from '@angular/router';
+import { EventEmitter } from '@angular/core';
+
 @Component({
   selector: 'app-booklist',
   templateUrl: './booklist.component.html',
@@ -10,7 +13,7 @@ import {Response } from '@angular/http';
 })
 export class BooklistComponent implements OnInit {
 
-  constructor(private httpservice :HttpserviceService) {
+  constructor(private httpservice :HttpserviceService,private routes:Router) {
     }
  @Input() genrename="init";
     @Input() public data;
@@ -18,6 +21,8 @@ export class BooklistComponent implements OnInit {
     public rowsOnPage = 10;
     public sortBy = "email";
     public sortOrder = "asc";
+    @Output() shoulddisplay=new EventEmitter<any>();
+      @Output() bookcontent=new EventEmitter<any>();
   ngOnInit() {
  
 
@@ -45,7 +50,20 @@ export class BooklistComponent implements OnInit {
   
 
 
+clickbook(bookname)
+{
+  console.log(bookname);
 
+   this.httpservice.sendbookname(bookname);
+//this.httpservice.bookdetail.emit(bookname);
+this.bookcontent.emit(bookname);
+//this.routes.navigate(['/detail']);
+this.shoulddisplay.emit(false);
+
+
+
+
+}
     
 
     public toInt(num: string) {

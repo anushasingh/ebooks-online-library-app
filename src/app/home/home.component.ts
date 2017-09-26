@@ -13,6 +13,7 @@ data;
 arr1=[];
 arr2=[];
 arr3=[];
+
   constructor(private httpservice :HttpserviceService) { }
 
   ngOnInit() {
@@ -56,8 +57,13 @@ this.data=this.arr3;
 console.log(this.arr3);
  });
 }
+changeview(value)
 
-
+{
+  console.log("AaaAAAs");
+  console.log(value);
+this.cond=value;
+}
    
 
 }

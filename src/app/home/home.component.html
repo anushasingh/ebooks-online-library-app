@@ -57,7 +57,9 @@
 
 
 </div>
-  <div class="col-xs-6 col-md-9"><app-booklist *ngIf="cond" [genrename]="genrename" [data]="data"></app-booklist></div>
+  <div class="col-xs-6 col-md-9"><app-booklist *ngIf="cond" [genrename]="genrename" [data]="data" (shoulddisplay)="changeview($event)"></app-booklist></div>
+  <div class="col-xs-6 col-md-9"><app-bookcontent *ngIf="!cond" ></app-bookcontent></div>
+
   </div>
 </div>
 
