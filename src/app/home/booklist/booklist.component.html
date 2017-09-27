@@ -38,9 +38,15 @@
         <div class="panel panel-default">
           
 
-            <table class="table table-striped" [mfData]="data" #mf="mfDataTable"
-                   [mfRowsOnPage]="1" [(mfSortBy)]="sortBy" [(mfSortOrder)]="sortOrder">
+            <table class="table table-striped" [mfData]="data |datafilter : filterQuery" #mf="mfDataTable"
+                   [mfRowsOnPage]="10" [(mfSortBy)]="sortBy" [(mfSortOrder)]="sortOrder">
                 <thead>
+                     <tr>
+                    <th colspan="5">
+                        Search
+                        <input class="form-control" [(ngModel)]="filterQuery"/>
+                    </th>
+                </tr>
                 <tr>
                 
                     <th style="width: 50%">
