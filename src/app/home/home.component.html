@@ -39,26 +39,27 @@
 
 
 
-<div class="container-fluid">
+<div class="container-fluid parent">
   <div class="row">
-   <div class="col-xs-12 col-md-3"><ul class="list-group">
- <button type="button" class="list-group-item" (click)="changegenrename($event.target.innerHTML)">Adventure</button>
- <button type="button" class="list-group-item" (click)="changegenrename($event.target.innerHTML)">Historical</button>
-  <button type="button" class="list-group-item" (click)="changegenrename($event.target.innerHTML)">Horror</button>
-   <button type="button" class="list-group-item" (click)="changegenrename($event.target.innerHTML)">Humorous</button>
-    <button type="button" class="list-group-item" (click)="changegenrename($event.target.innerHTML)">Mystery</button>
-     <button type="button" class="list-group-item" (click)="changegenrename($event.target.innerHTML)">Romance</button>
-      <button type="button" class="list-group-item" (click)="changegenrename($event.target.innerHTML)">Science Fiction</button>
-       <button type="button" class="list-group-item" (click)="changegenrename($event.target.innerHTML)">Thriller</button>
-       <button type="button" class="list-group-item" (click)="changegenrename($event.target.innerHTML)">Western</button>
-       <button type="button" class="list-group-item"(click)="changegenrename($event.target.innerHTML)">Young Adult</button>
+   <div class="col-xs-12 col-md-3 sidemenu" ><ul class="list-group list ">
+		  <button type="button" class="list-group-item itemyellow" >Genre</button>
+
+ <button type="button" class="list-group-item item" (click)="changegenrename($event.target.innerHTML)"><p class="po">Adventure</p></button>
+ <button type="button" class="list-group-item item" (click)="changegenrename($event.target.innerHTML)">Historical</button>
+  <button type="button" class="list-group-item item" (click)="changegenrename($event.target.innerHTML)">Horror</button>
+   <button type="button" class="list-group-item item" (click)="changegenrename($event.target.innerHTML)">Humorous</button>
+    <button type="button" class="list-group-item item" (click)="changegenrename($event.target.innerHTML)">Mystery</button>
+     <button type="button" class="list-group-item item" (click)="changegenrename($event.target.innerHTML)">Romance</button>
+      <button type="button" class="list-group-item item" (click)="changegenrename($event.target.innerHTML)">Science Fiction</button>
+       <button type="button" class="list-group-item item" (click)="changegenrename($event.target.innerHTML)">Thriller</button>
+ 
  
 </ul>
-
+  
 
 </div>
-  <div class="col-xs-6 col-md-9"><app-booklist *ngIf="cond" [genrename]="genrename" [data]="data" (shoulddisplay)="changeview($event)"></app-booklist></div>
-  <div class="col-xs-6 col-md-9"><app-bookcontent *ngIf="!cond" ></app-bookcontent></div>
+  <div class="col-xs-12 col-md-9 maincontent"><app-booklist *ngIf="cond" [genrename]="genrename" [data]="data" (shoulddisplay)="changeview($event)"></app-booklist></div>
+  <div class="col-xs-12 col-md-9 maincontent"><app-bookcontent *ngIf="!cond" ></app-bookcontent></div>
 
   </div>
 </div>

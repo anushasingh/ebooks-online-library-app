@@ -1,0 +1,94 @@
+.sidemenu
+{
+     position: fixed;
+
+    top: 50px;
+    left: 0px;
+    bottom: 0px;
+    width: 250px;
+    background-color: #303030;
+}
+
+.parent{
+top: 0px;
+    margin-left: 250px;
+    margin-top: 0px;
+    background-color: blue;
+}
+
+.maincontent
+{
+    position: relative;
+    width:100%;
+    /* padding-left must be the same as sidebar width */
+    /* This could be anything, content should scroll vertical */
+  background-color: red;
+  top: 50px;
+   
+
+}
+.list
+{
+margin-top: 30px;
+background-color: #202020;
+}
+body,html{
+    background-color: #202020;
+}
+.item{
+    height: 50px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+   
+    
+   
+    border-radius:0px;
+    border-width: 0px;
+color:#FDD736;
+    background-color: #080808;
+    opacity: 0.8;
+  
+
+    
+}
+
+.itemyellow
+{
+background-color: #FDD736;
+ height: 40px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border-radius:0px;
+    border-width: 0px;
+    
+
+}
+
+.item:hover{
+
+    background-color: #FDD736;
+    color:#000000;
+    
+  
+
+    
+}
+.itemyellow:hover{
+
+    background-color: #FDD736;
+    color:#000000;
+    
+  
+
+    
+}
+
+
+/*.po
+{
+    color: yellow;
+  font-family: "Times New Roman", Times, serif;
+  font-size:20px;
+  font-weight: bold;
+  
+}*/
