@@ -3,3 +3,51 @@
 body,html{
     background-color: #202020;
 }
+
+
+@font-face {
+    font-family: "My Custom Font";
+        
+     
+    src: url("./bernhardfashionbt.ttf") format("truetype");
+}
+
+.customfont { 
+    font-family: Arial, Helvetica, sans-serif, Verdana, Tahoma;
+
+    /* above can make it "My Custom Font"*/
+     font-weight:100;
+     color: #FDD736;
+     font-size: 20px;
+
+}
+
+@font-face {
+    font-family: "otto";
+        
+     
+    src: url("./Otto.ttf") format("truetype");
+}
+
+.customfont2 { 
+    font-family: "otto", Verdana, Tahoma;
+     font-weight:500;
+     color: #FDD736;
+     font-size: 65px;
+     
+    position: absolute;
+    width: 100%;
+    /*left: 0;*/
+    text-align: left;
+    /*margin:0 auto;*/
+    margin-left: 5px;
+    margin-top: 2px;
+    margin-bottom: 2px;
+
+
+  
+
+}
+.navbar-nav > li > a {padding-top:10px !important; padding-bottom:2px !important;}
+.navbar {min-height:70px !important}
+

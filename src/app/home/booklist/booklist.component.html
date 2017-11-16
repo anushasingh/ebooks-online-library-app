@@ -1,79 +1,98 @@
 
 
 <div class="container-fluid ">
-    <div class="col-xs-12 col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2">
+    <div class="col-xs-12 col-md-10 col-lg-8 " id="insidec">
 
 
 
 
         <div class="row">
           
-            <div class="col-xs-2">
-              
-               
-            </div>
-            <div class="col-xs-4">
-                <div class="row">
-                    <label class="col-xs-12 label-control">Sort by</label>
-                </div>
-                <div class="col-xs-6">
+           
+            <div class="col-xs-12"  >
+
+
+                <div class="col-xs-10">
+                 </div>
+
+
+                <div class="col-xs-2">
                     <div class="row">
-                        <select class="form-control input-sm" [(ngModel)]="sortBy">
+                     <!--<div class="row" >
+                    <label class="col-xs-12 label-control" >Sort by</label>
+                    </div>-->
+                        <!--<select class="form-control input-sm" id="sortby" [(ngModel)]="sortBy" >
+                           
                             <option ngValue="name">Name</option>
                             <option ngValue="email">Author</option>
                           
-                        </select>
+                        </select>-->
                     </div>
                 </div>
-                <div class="col-xs-6">
-                    <div class="row">
-                      
-                    </div>
-                </div>
+
+                
+                 
+               
             </div>
         </div>
-        <div class="panel panel-default tablee">
-            <div class="panel-heading">User information</div>
+        <div class="panel panel-default tablee" >
+          
       
         <div class="panel panel-default tablee">
           
 
-            <table class="table  tablee" [mfData]="data |datafilter : filterQuery" #mf="mfDataTable"
-                   [mfRowsOnPage]="10" [(mfSortBy)]="sortBy" [(mfSortOrder)]="sortOrder">
-                <thead>
-                     <tr>
-                    <th colspan="5">
-                        Search
-                        <input class="form-control" [(ngModel)]="filterQuery"/>
+            <table class="table-striped tablee" [mfData]="data |datafilter : filterQuery" #mf="mfDataTable"
+                   [mfRowsOnPage]="10" [(mfSortBy)]="sortBy" [(mfSortOrder)]="sortOrder" id="table2">
+                <thead id="tablee3">
+                     <tr id="tablee3">
+                         <th style="width: 85%" >
+                        
+                    </th>
+                    <th style="width: 15%"  colspan="5" >
+                       <!--<p id="aa">hgjh</p>-->
+                       <div class="form-group has-feedback">
+                            <i class="glyphicon glyphicon-search form-control-feedback"></i>
+                        <input class="form-control search" [(ngModel)]="filterQuery" placeholder="Search"/>
+                        
+                       </div>
                     </th>
                 </tr>
-                <tr>
+                <!--<tr>
                 
-                    <th style="width: 50%">
-                        <mfDefaultSorter by="name">Name</mfDefaultSorter>
+                    <th style="width: 50%;" id="aa">
+                        <p id="theader">Name</p>
                     </th>
                     <th style="width: 50%">
-                        <mfDefaultSorter by="email">Author</mfDefaultSorter>
+                         <p id="theader">Name</p>
                     </th>
                
-                </tr>
+                </tr>-->
                
                 </thead>
-                <tbody>
-                <tr *ngFor="let item of mf.data">
+                <tbody class="tablee">
+ <tr *ngFor="let item of mf.data" id="tablee2">
                   
-                    <td (click)="clickbook($event.srcElement.firstChild.data)">{{item.name}}</td>
-                       <td>{{item.author}}</td>
-                       <img src={{item.image}} alt="" border="3" height="100" width="100" />
+                    <td   >
+                        <h3 class="customfont" >
+                        {{item.name}}  <button type="button" class="btn btn-primary btn-sm" style=" font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS';" (click)="clickbook(item.name)">Read</button></h3>
+                       
+                   
+                    <p id="desc">{{item.desc}}</p>
+                        </td>
+ 
+                    <td id="auth">{{item.author}}</td>
+                       
+                       <img src={{item.image}} alt="" border="3" height="100%" width="100%" style="padding:5px;background-color:black; color:black" />
                     <!--<td>{{item.email}}</td>
                     <td class="text-right">{{item.age}}</td>
                     <td>{{item.city | uppercase}}</td>-->
                 </tr>
+             
                 </tbody>
                <tfoot>
                 <tr>
-                    <td colspan="5">
-                        <mfBootstrapPaginator [rowsOnPageSet]="[5,10,15]"></mfBootstrapPaginator>
+                    <td colspan="5" >
+                        <mfBootstrapPaginator [rowsOnPageSet]="[5,10,15]" id="pag"></mfBootstrapPaginator>
                     </td>
                 </tr>
                 </tfoot>

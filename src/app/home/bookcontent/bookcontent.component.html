@@ -1,33 +1,32 @@
-<p>
-  bookcontent works!
+<p  style=" color:white; margin-top:50px; font-size:35px;" class="customfont">
+
+
 </p>
-{{bookname}}
-
-
-
-<div class="container-fluid">
-    <div class="col-xs-12 col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2">
 
 
 
 
-        <div class="panel panel-default">
+<div class="container-fluid ">
+    <div class="col-xs-12 col-md-10  col-lg-8  tablee" id="insidec">
+
+
+
+
+        <div class="panel panel-default tablee">
           
       
-        <div class="panel panel-default">
+        <div class="panel panel-default tablee">
           
 
-            <table class="table table-striped" [mfData]="arr4" #mf="mfDataTable"
+            <table class="table table-striped tablee" [mfData]="arr4" #mf="mfDataTable"
                    [mfRowsOnPage]="1" [(mfSortBy)]="sortBy" [(mfSortOrder)]="sortOrder">
                
-                <tbody>
-                <tr *ngFor="let item of mf.data">
+                <tbody class="tablee">
+                <tr  *ngFor="let item of mf.data" style="background-color:#303030; color:white">
                   
                    {{item}}
                      
-                    <!--<td>{{item.email}}</td>
-                    <td class="text-right">{{item.age}}</td>
-                    <td>{{item.city | uppercase}}</td>-->
+                   
                 </tr>
                 </tbody>
                <tfoot>

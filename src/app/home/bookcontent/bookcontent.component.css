@@ -1,0 +1,18 @@
+#insidec
+{
+    width: 100%;
+}
+.tablee {
+    border-style: solid;
+    border-width: 2px 10px 4px 20px;
+    border-color:transparent; 
+    background-color: #303030;
+}
+.table-striped > tbody > tr:nth-child(odd) > td, .table-striped > tbody > tr:nth-child(odd) > th {
+   background-color: #080808;
+}
+.table-striped > tbody > tr:nth-child(even) > td, .table-striped > tbody > tr:nth-child(even) > th {
+   background-color: #080808;
+   
+  
+}

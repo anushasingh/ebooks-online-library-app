@@ -7,7 +7,11 @@ import {Response } from '@angular/http';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-genrename;
+
+
+  // to add data in database author name and readbooks detalbookname should exactly be the same
+  // to do: pagination color, duplicate additions in table on multiple clicks of genre
+genrename="adventure";
 cond;
 data;
 arr1=[];
@@ -17,6 +21,7 @@ arr3=[];
   constructor(private httpservice :HttpserviceService) { }
 
   ngOnInit() {
+    this.changegenrename("adventure");
   }
 changegenrename(genrename)
 {
@@ -26,6 +31,7 @@ changegenrename(genrename)
  this.arr1=[];
  this.arr2=[];
  this.arr3=[];
+
   this.genrename=genrename.toLowerCase();
   this.cond=true;
   this.httpservice.getdata(this.genrename).subscribe(

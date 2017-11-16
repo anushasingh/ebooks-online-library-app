@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {Http} from "@angular/http";
+import { Http } from "@angular/http";
 import { HttpserviceService} from '../../httpservice.service';
 import { RouterModule, Router,ActivatedRoute } from '@angular/router';
 import { EventEmitter } from '@angular/core';
@@ -17,7 +17,7 @@ arr2=[];
 arr3=[];
 arr4=[];
 data;
- public filterQuery = "";
+    public filterQuery = "";
     public rowsOnPage = 1;
     public sortBy = "email";
     public sortOrder = "asc";
@@ -60,7 +60,7 @@ for (var key in this.arr2) {
 }
 this.data=this.arr3;
 console.log("AAAASFASAF");
-this.arr4=this.splitNChars(this.arr3[0].text,1000);
+this.arr4=this.splitNChars(this.arr3[0].text,5000);
 console.log(this.arr3);
  });
    // this.bookname=this.routes.snapshot.params['name'];
