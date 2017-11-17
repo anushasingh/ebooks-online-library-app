@@ -1,7 +1,7 @@
 # Readbooks
 
 A website for reading classic books online.
-![Alt text](https://github.com/anushasingh/readbooks/blob/master/src/assets/images/ff.PNG "Optional title")
+
 
 
 
