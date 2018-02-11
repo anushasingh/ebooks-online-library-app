@@ -6,7 +6,7 @@ A website for reading classic books online.
 
 
 
-![Alt text](https://drive.google.com/open?id=1NbjfRUhT_FzuBglDOnngUxnOLx1Z1N8s "Optional title") 
+![Alt text](https://github.com/anushasingh/readbooks/blob/master/ezgif.com-video-to-gif.gif "Optional title") 
 
 
 
